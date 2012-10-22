@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				Alert.show("小明你是猪吧？","哈哈",1,null,closeHanlder);
+			}
+			
+			private function closeHanlder(event:CloseEvent):void
+			{
+				Alert.show("啊？果然是猪！","哈哈",1);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Button x="185" y="147" label="小明同学请点击" click="button1_clickHandler(event)"/>
+</s:WindowedApplication>
